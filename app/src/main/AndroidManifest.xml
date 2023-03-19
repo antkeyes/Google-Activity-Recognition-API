@@ -28,8 +28,12 @@
         </activity>
         <receiver
             android:name=".ActivityRecognitionBroadcastReceiver"
-            android:enabled="true"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.activityrecognitionapp.ACTION_PROCESS_UPDATES" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
